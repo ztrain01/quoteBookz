@@ -1,7 +1,16 @@
-var app = angular.module('quoteBookz');
+var app = angular.module('quoteBook');
 
-app.controller('mainCtrl', function($scope, mainService){
+app.controller('MainController', function($scope, mainService){
   
   $scope.test = 'Yahoo!';
+
+app.service('mainService', function() { 
+
   
+var getData = function() {
+  $scope.quotes = mainService.getData()
+}  
+  getData();
+
+})
 });
